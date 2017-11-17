@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AFC3177A-34D4-4E22-8BE9-CC687E137385}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SigninAssistant</RootNamespace>
+    <AssemblyName>SigninAssistant</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FunctionBLL\WinDLL.cs" />
+    <Compile Include="ModelData\LessonInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TransprantTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewForm\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForm\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForm\FormMainA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForm\FormMainA.Designer.cs">
+      <DependentUpon>FormMainA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionBLL\AutoRun.cs" />
+    <Compile Include="FunctionBLL\CommonBLL.cs" />
+    <Compile Include="FunctionBLL\NetWork.cs" />
+    <Compile Include="ModelData\ClassRoom.cs" />
+    <Compile Include="FunctionBLL\HttpHelper.cs" />
+    <Compile Include="ModelData\CommonData.cs" />
+    <Compile Include="ModelData\Lesson.cs" />
+    <Compile Include="ModelData\Student.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewForm\FormMainB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForm\FormMainB.Designer.cs">
+      <DependentUpon>FormMainB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForm\stuIconA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewForm\stuIconA.designer.cs">
+      <DependentUpon>stuIconA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForm\stuIconB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewForm\stuIconB.Designer.cs">
+      <DependentUpon>stuIconB.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="TransprantTextBox.resx">
+      <DependentUpon>TransprantTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForm\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForm\FormMainA.resx">
+      <DependentUpon>FormMainA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForm\FormMainB.resx">
+      <DependentUpon>FormMainB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForm\stuIconA.resx">
+      <DependentUpon>stuIconA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForm\stuIconB.resx">
+      <DependentUpon>stuIconB.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\FormLoginRes\01注册_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\FormLoginRes\确定_07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\FormLoginRes\确定悬停_07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\FormLoginRes\输入_07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\FormLoginRes\信息注册_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\ClassAttendance\上课考勤背景.png" />
+    <None Include="Res\ClassAttendance\A_downImage.png" />
+    <None Include="Res\ClassAttendance\A_moveImage.png" />
+    <None Include="Res\ClassAttendance\A_normalImage.png" />
+    <None Include="Res\ClassAttendance\B_downImage.png" />
+    <None Include="Res\ClassAttendance\B_moveImage.png" />
+    <None Include="Res\ClassAttendance\B_normalImage.png" />
+    <Content Include="Res\ClassAttendance\上课默认头像.png" />
+    <None Include="Res\ExamAttendance\考试考勤背景.png" />
+    <None Include="Res\FormLoginRes\login_move.png" />
+    <None Include="Res\FormLoginRes\login_normal.png" />
+    <Content Include="Res\FormLoginRes\登录背景.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
